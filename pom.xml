@@ -74,14 +74,14 @@
         </plugins>
     </build>
     <profiles>
-		<profile>
-			<!-- When built in OpenShift the 'openshift' profile will be used when 
-				invoking mvn. -->
-			<!-- Use this profile for any OpenShift specific customization your app 
-				will need. -->
-			<!-- By default that is to put the resulting archive into the 'webapps' 
-				folder. -->
-			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+	<profile>
+		<!-- When built in OpenShift the 'openshift' profile will be used when 
+		invoking mvn. -->
+		<!-- Use this profile for any OpenShift specific customization your app 
+		will need. -->
+		<!-- By default that is to put the resulting archive into the 'webapps' 
+		folder. -->
+		<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
 			<id>openshift</id>
 			<build>
 				<finalName>{APP_NAME}</finalName>
@@ -91,7 +91,7 @@
 						<version>2.1.1</version>
 						<configuration>
 							<outputDirectory>webapps</outputDirectory>
-							<warName>ROOT</warName>
+							<warName>ferret</warName>
 						</configuration>
 					</plugin>
 				</plugins>
