@@ -24,7 +24,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.text.*;
+import java.util.Date;
 import net.wasdev.samples.ferret.html.Element;
 import net.wasdev.samples.ferret.html.Element.ElementType;
 import net.wasdev.samples.ferret.html.Page;
@@ -38,24 +39,36 @@ public final class FerretServlet extends HttpServlet {
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws ServletException,
             IOException {
         writeResponse(request, response);
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println("A GET request has been made to this servlet at " + dateFormat.format(date));
     }
 
     @Override
     protected void doPost(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
         writeResponse(request, response);
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println("A POST request has been made to this servlet at " + dateFormat.format(date));
     }
 
     @Override
     protected void doPut(final HttpServletRequest request, final HttpServletResponse response) throws ServletException,
             IOException {
         writeResponse(request, response);
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println("A PUT request has been made to this servlet at " + dateFormat.format(date));
     }
 
     @Override
     protected void doDelete(final HttpServletRequest request, final HttpServletResponse response)
             throws ServletException, IOException {
         writeResponse(request, response);
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date date = new Date();
+		System.out.println("A DELETE request has been made to this servlet at " + dateFormat.format(date));
     }
 
     private FerretData getFerretData(final HttpServletRequest httpServletRequest) {
